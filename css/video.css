@@ -1,0 +1,66 @@
+.video-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    height: 600px;
+}
+
+.video-wrapper {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.video-wrapper.active {
+    opacity: 1;
+}
+
+.custom-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-arrows {
+    display: flex;
+    align-items: center; /* Centralizar verticalmente */
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top: 10px;
+    position: absolute;
+    top: 50%; /* Coloca as setas no centro vertical */
+    transform: translateY(-100%); /* Ajusta para centralizar completamente */
+}
+
+.arrow {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+
+}
+
+.video-info {
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta o centro */
+    text-align: center;
+    color: white;
+}
+
+.video-info h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.video-info p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
