@@ -3,12 +3,10 @@
 
 <head>
     <title>Mapa Tech</title>
-    <link rel="stylesheet" href="css/video.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/menu.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         crossorigin="anonymous" referrerpolicy="no-referrear">
+
 
 </head>
 
@@ -16,13 +14,13 @@
     <header>
         <div class="menu">
             <div class="logo">
-                <p>Mapa Tech</p>
+                <img class="img-logo" src="img/logo/Mapa-Tech-FBranco.jpg">
             </div>
             <ul class="links">
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#sectionHabilidades">E-REURB</a></li>
-                <li><a href="#">SERVIÇOS</a></li>
-                <li><a href="#">QUEM SOMOS?</a></li>
+                <li><a href="#servicos">SERVIÇOS</a></li>
+                <li><a href="#quemSomos">QUEM SOMOS?</a></li>
             </ul>
             <div class="toggle_btn">
                 <i class="fa-solid fa-bars"></i>
@@ -48,6 +46,10 @@
                         <source src="video/Corretor.mp4" type="video/mp4">
                         Seu navegador não suporta o elemento de vídeo.
                     </video>
+                    <div class="image mobile-image">
+                        <img src="img/carrouselImages/corretorSegurandoCasa.png"
+                            alt="Um corretor idoso segurando uma miniatura de casa azul">
+                    </div>
                     <div class="video-info">
                         <h2>Sua casa, sua propriedade.</h2>
                         <p>Garantimos a segurança do seu patrimônio para sua família</p>
@@ -55,9 +57,25 @@
                 </div>
                 <div class="video-wrapper">
                     <video class="custom-video" autoplay loop muted>
+                        <source src="video/CidadeNoite.mp4" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                    <div class="image mobile-image">
+                        <img src="img/carrouselImages/cidadenoite.jpeg" alt="Uma cidade grande durante a noite">
+                    </div>
+                    <div class="video-info">
+                        <h2>Dificuldades para regularizar seu ímovel?</h2>
+                        <p>Vem com a gente</p>
+                    </div>
+                </div>
+                <div class="video-wrapper">
+                    <video class="custom-video" autoplay loop muted>
                         <source src="video/Cidade2.mp4" type="video/mp4">
                         Seu navegador não suporta o elemento de vídeo.
                     </video>
+                    <div class="image mobile-image">
+                        <img src="img/carrouselImages/cidadeDiaImagem.png" alt="Uma cidade grande durante o dia">
+                    </div>
                     <div class="video-info">
                         <h2>Facilidades</h2>
                         <p>Trazemos o máximo de facilidade, para regularizar seu Imóvel</p>
@@ -65,25 +83,17 @@
                 </div>
                 <div class="video-wrapper">
                     <video class="custom-video" autoplay loop muted>
-                        <source src="video/CidadeNoite.mp4" type="video/mp4">
-                        Seu navegador não suporta o elemento de vídeo.
-                    </video>
-                    <div class="video-info">
-                        <h2>Título do Vídeo 1</h2>
-                        <p>Subtítulo do Vídeo 1</p>
-                    </div>
-                </div>
-                <div class="video-wrapper">
-                    <video class="custom-video" autoplay loop muted>
                         <source src="video/Favela2.mp4" type="video/mp4">
                         Seu navegador não suporta o elemento de vídeo.
                     </video>
+                    <div class="image mobile-image">
+                        <img src="img/carrouselImages/favelaImagem.png" alt="Uma favela durante o dia">
+                    </div>
                     <div class="video-info">
-                        <h2>Título do Vídeo 1</h2>
-                        <p>Subtítulo do Vídeo 1</p>
+                        <h2>Acessibilidade</h2>
+                        <p>Trazemos um serviço de ótima qualidade e velocidade, com a maior acessibilidade para você</p>
                     </div>
                 </div>
-                <!-- Adicione mais divs de vídeo conforme necessário -->
             </div>
             <div class="carousel-arrows">
                 <div class="arrow left-arrow">&larr;</div>
@@ -91,70 +101,68 @@
             </div>
             <script src="script/setasScript.js"></script>
         </section>
-        <section>
+        <section id="servicos">
             <center>
                 <h1 class="title">SERVIÇOS</h1>
             </center>
-            <div class="div-container">
-                <div class="card">
-                    <div class="img-wrapper">
-                        <img class="img-card" src="img/casa-de-praia-colorida-simples.jpg">
-                    </div>
-                    <div class="content">
-                        <h2 class="card-title">O direito e título da sua propriedade</h2>
-                        <p>Usamos conhecimentos em processos, juridicos e cartoriais,  e dos processos que envolvem para viabilizar a emissão das Certidões.</p>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="img-wrapper">
-                        <img class="img-card" src="img/download.jpeg">
-                    </div>
-                    <div class="content">
-                        <h2 class="card-title">Tecnologia em REURB: Tudo 100% Digital</h2>
-                        <p>Usamos o melhor software de regularização do estado, facilitando mais ainda o processo, para que você tenha seu imóvel o mais rápido possível.</p>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="img-wrapper">
-                        <img class="img-card" src="img/apoio-jurídico.jpg">
-                    </div>
-                    <div class="content">
-                        <h2 class="card-title">Assistência Jurídica</h2>
-                        <p>Entreagamos o total apoio jutídico para você durante todo o processo de regularização. Além de total acompanhamento legal para que tudo ocorra bem.</p>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="img-wrapper">
-                        <img class="img-card" src="img/lote.png">
-                    </div>
-                    <div class="content">
-                        <h2 class="card-title"> Consultoria nos processos
-                            de REURB</h2>
-                        <p>Entreagamos consultoria sobre regularização, dando total capacitamento.</p>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="img-wrapper">
-                        <img class="img-card" src="img/projetoarquitetonico.jpeg">
-                    </div>
-                    <div class="content">
-                        <h2 class="card-title">Criação de projetos arquitetônicos</h2>
-                        <p>Criamos projetos arquitetônicos para seu imovél.</p>
-                    </div>
-                </div>
+
+            <div class="servico-item">
+                <h2 class="subtitle">O direito da sua propriedade:</h2>
+                <br>
+                <p>Nosso dever e serviço é garantir seu patrimômio regularizado para você e sua família. 
+                    Tudo utilizando alto nível de conhecimento jurídico e tecnologia!!</p>
+                <br>
+
+                <img src="img/servicos/casa.png" width="100%">
             </div>
             
+            <div class="servico-item">
+                <img src="img/servicos/martelo.png" class="im1" width="100%">
+                <h2 class="subtitle">Assistência Jurídica:</h2>
+                <br>
+                <p>Nossa equipe especializada está aqui para guiar você através do processo de regularização fundiária, 
+                    assegurando que você tenha a tranquilidade que merece. 
+                    Conte conosco para proteger seus interesses e garantir que tudo esteja em conformidade com a lei</p>
+                <br>
+                <img src="img/servicos/martelo.png" class="im2" width="100%">
+            </div>
+            
+            <div class="servico-item">
+                <h2 class="subtitle">Consultoria nos processos de REURB:</h2>
+                <br>
+                <p>Nossa equipe especializada está aqui para guiar você através do processo de regularização fundiária, 
+                    assegurando que você tenha a tranquilidade que merece. 
+                    Conte conosco para proteger seus interesses e garantir que tudo esteja em conformidade com a lei</p>
+                <br>
+                <img src="img/servicos/terreno.png" width="100%">
+            </div>
 
         </section>
-        <section></section>
-        <section></section>
-        <section></section>
-
+        <section id="quemSomos">
+            <div class="container">
+                <center>
+                    <h1 class="green-title">QUEM SOMOS?</h1>
+                </center>
+                <div class="servico-item">
+                    <p class="p-green">Somos uma empresa de regularização que utiliza a tecnologia para tornar a regularização de imóveis mais acessível e eficiente. Nosso compromisso é garantir segurança e qualidade de vida para nossos clientes, tornando o processo de regularização mais simples e transparente.</p>
+                    <img src="img/alvo.png" width="100%" >
+                </div>
+            </div>
+        </section>
+            
     </main>
+
+    <footer>
+        <div class="social-buttons">
+            <a href="https://wa.me/86981905811" target="_blank" class="whatsapp-button">
+                <img src="img/logo/whasApp.png" alt="WhatsApp" width="50" height="50">
+            </a>
+            <a href="https://www.instagram.com/seu_perfil_do_instagram/" target="_blank" class="instagram-button">
+                <img src="img/logo/instagram.png" alt="Instagram" width="50" height="50">
+            </a>
+        </div>
+    </footer>
+    
 </body>
 
 </html>

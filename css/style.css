@@ -7,60 +7,372 @@ body {
     letter-spacing: 0.5rem;
     font-size: 40px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-bottom: 2px solid #91C8E4;
+    border-bottom: 5px solid #1A5D1A;
     padding-bottom: 3px;
     display: inline-block;
 }
 
-.card-title {
+.green-title{
+    letter-spacing: 0.5rem;
+    color: white;
+    font-size: 40px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-bottom: 5px solid #FFF0CE;
+    padding-bottom: 3px;
+    display: inline-block;
+}
+
+.subtitle {
+    margin-left: 34px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.p{
+p {
+    margin-left: 34px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.p-green{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--preto);
+
+    font-size: 1..6rem;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-section {
-    margin-bottom: 100px;
+
+
+
+header {
+    position: relative;
+    padding: 0 2rem;
 }
 
-.card-container{
-    margin-bottom: 100px;
-    margin: 30%;
-}
-
-.card {
-    width: 20%;
-    background-color: #91C8E4;
-    text-align: center;
-    padding: 0%;
-    display: inline-block;
-    margin: 4%;
-    box-sizing: border-box;
-    box-shadow: 0 9px 18px rgba(0, 0, 0, 0.4);
-}
-
-
-.img-wrapper {
-    height: 170px;
-    overflow: hidden;
-}
-
-.img-card {
+.menu {
     width: 100%;
+    height: 60px;
+
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.menu .toggle_btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+.dropdown_menu {
+    display: none;
+    position: fixed;
+    right: 2rem;
+    top: 60px;
+    z-index: 1000;
+    height: 0;
+    width: 100%;
+    background: #176B87;
+    opacity: 0.8;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+
+    transition: height .2s cubic-bezier(0.075, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu.open {
+    height: 220px;
+}
+
+
+
+@media(max-width: 992px) {
+    .menu .links {
+        display: none;
+    }
+
+    .menu .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+
+    .menu .links li:hover a {
+        border-bottom: 2px solid white;
+        padding-bottom: 3px;
+    }
+
+    .dropdown_menu li:hover a {
+        border-bottom: 2px solid white;
+        padding-bottom: 3px;
+    }
+
+    #home {
+        margin-top: 25%;
+    }
+}
+
+@media(max-width: 576px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+}
+
+.menu .links li a {
+    text-decoration: none;
+    position: relative;
+}
+
+.menu .links li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #186F65;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.menu .links li a:hover::after {
+    transform: scaleX(1);
+}
+
+.img-logo {
+    margin-top: 5%;
+    max-width: 200px;
     height: auto;
+}
+
+#home {
+    margin-top: 3%;
+}
+
+
+.video-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    height: 600px;
+}
+
+.video-wrapper {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.video-wrapper.active {
+    opacity: 1;
+}
+
+.custom-video {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-.content {
-    padding: 10px;
+.carousel-arrows {
+    display: flex;
+    align-items: center;
+    /* Centralizar verticalmente */
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top: 10px;
+    position: absolute;
+    top: 50%;
+    /* Coloca as setas no centro vertical */
+    transform: translateY(-100%);
+    /* Ajusta para centralizar completamente */
 }
 
-@media(max-width: 992px) {
-    .card {
-        display: block;
-        width: 80%;
-        height: auto;
-        margin: 10%;
+.arrow {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+
+}
+
+.video-info {
+    position: absolute;
+    top: 50%;
+    /* Centraliza verticalmente */
+    left: 50%;
+    /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Ajusta o centro */
+    text-align: center;
+    color: white;
+}
+
+.video-info h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.video-info p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+@media (max-width: 767px) {
+    .video-wrapper video {
+        display: none;
     }
+
+    .video-wrapper .mobile-image {
+        display: block;
+    }
+}
+
+.servico-item{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+@media (max-width: 768px) {
+    .servico-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .im1 {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .im2{
+        display: none;
+    }
+
+    .im1{
+        height: 350px;
+        width: 350px;
+    }
+}
+
+.white{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#quemSomos {
+    background-color: #1A5D1A;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+.content {
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+    .content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .content p {
+        flex-basis: 48%;
+    }
+}
+
+@media (max-width: 767px) {
+    .content {
+        display: block;
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.whatsapp-button, .instagram-button {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    color: #333;
+    font-size: 24px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.whatsapp-button:hover, .instagram-button:hover {
+    background-color: #25d366; /* Cor do WhatsApp */
+    transform: scale(1.1);
 }
